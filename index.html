@@ -49,7 +49,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-	function showReult() {
+	function showReults() {
 		var resultText = document.getElementById("results");
 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
 	}
@@ -147,7 +147,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             <h1>Results</h1>
         </div>
         <div class="w3-container">
-            <p id="resultText"></p>
+            <p id="resultText">this text should go away</p>
             <a class="w3-btn w3-grey" onclick="showResult()">See Result</a>
         </div>
     </div>
@@ -156,8 +156,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>DIY!</p>
     </footer>
 
-    <footer class="w3-bottom w3-container w3-flat-carrot">
-        <p>DIY!</p>
-    </footer>
+    
 </body>
 </html>
