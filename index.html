@@ -42,14 +42,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
+	//	alert(allergy_count);
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
+	function showReult() {
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+	}
   </script>
 
 
@@ -145,7 +148,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         </div>
         <div class="w3-container">
             <p id="resultText"></p>
-            <a href="#header" class="w3-btn w3-grey" onclick="showResult()">See Result</a>
+        //    <a href="#header" class="w3-btn w3-grey" onclick="showResult()">See Result</a>
         </div>
     </div>
 
@@ -164,7 +167,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             <h1>Results</h1>
         </div>
         <div class="w3-container">
-            <p id="resultText"></p>
+            <p id="results">this text should get replaced</p>
             <a href="#header" class="w3-btn w3-grey">Restart</a>
         </div>
     </div>
