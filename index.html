@@ -49,6 +49,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+//	functionResults() {
+	
 	function showResult() {
 		var resultText = document.getElementById("results");
 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
@@ -136,11 +138,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         </div>
         <div class="w3-container">
             <p>Do you have body aches?</p>
-            <a href="#resultPage" class="w3-btn w3-green" onclick="coldAdd()">Yes</a>
-            <a href="#resultPage" class="w3-btn w3-red">No</a>
+            <a href="#five" class="w3-btn w3-green" onclick="coldAdd()">Yes</a>
+            <a href="#five" class="w3-btn w3-red">No</a>
+        </div>
+    </div>
+	<!-- Question 5 -->
+    <div class="page" id="five">
+        <div class="w3-container w3-flat-carrot">
+            <h1>Question 5</h1>
+        </div>
+        <div class="w3-container">
+            <p> Have you experienced any stomach pain or digestive issues? </p></p>
+            <a href="#six" class="w3-btn w3-green" onclick="allergiesAdd()">Yes</a>
+            <a href="#six" class="w3-btn w3-red">No</a>
         </div>
     </div>
 
+
+	
     <!-- Results Page -->
     <div class="page" id="resultPage">
         <div class="w3-container w3-flat-carrot">
