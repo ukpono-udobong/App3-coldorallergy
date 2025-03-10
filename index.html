@@ -35,11 +35,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
    </head> 
 
 
-<script>
+<script>  
         var allergy_count = 0;
         var cold_count = 0;
 
+//these functions above tally the number of answers consistent with cold and allergies
 
+//the functions bellow increase the allergy symptom count by 1 when a user selects an allergy-related symptom
+	
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 	//	alert(allergy_count);
@@ -49,8 +52,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-	
+//Determines whether the user's symptoms are more consistent with allergies or a cold and creates a result based on the tallied answers.
 	function showResult() {
+		//Get the paragraph element where the result will be displayed
     var resultText = document.getElementById("resultMessage"); // Get the correct element
     if (allergy_count > cold_count) {
         resultText.innerHTML = "Your symptoms are more consistent with allergies.";
@@ -92,7 +96,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -103,7 +107,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- Question 1 -->
     <div class="page" id="one">
         <div class="w3-container w3-flat-carrot">
-            <h1>Question 1</h1>
+            <h1>Question 1</h1> 
         </div>
         <div class="w3-container">
             <p>Are your eyes watery or itchy?</p>
