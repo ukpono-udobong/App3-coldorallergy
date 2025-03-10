@@ -51,16 +51,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 	
 	function showResult() {
-		var resultText = document.getElementById("resultText");
-		 if (allergy_count > cold_count) {
-            resultText = "Your symptoms are more consistent with allergies.";
-        } else if (cold_count > allergy_count) {
-            resultText = "Your symptoms are more consistent with a cold.";
-        } else {
-            resultText = "Your symptoms could indicate either a cold or allergies.";
-        }
-        document.getElementById("results").innerText = resultText;
-	}
+    var resultText = document.getElementById("resultMessage"); // Get the correct element
+    if (allergy_count > cold_count) {
+        resultText.innerHTML = "Your symptoms are more consistent with allergies.";
+    } else if (cold_count > allergy_count) {
+        resultText.innerHTML = "Your symptoms are more consistent with a cold.";
+    } else {
+        resultText.innerHTML = "Your symptoms could indicate either a cold or allergies.";
+    }
+}
   </script>
 
 
@@ -148,14 +147,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             <a href="#five" class="w3-btn w3-red">No</a>
         </div>
     </div>
-	<!-- Question 5 -->
+	<!-- Question 6 -->
     <div class="page" id="five">
         <div class="w3-container w3-flat-carrot">
             <h1>Question 5</h1>
         </div>
         <div class="w3-container">
             <p> Have you experienced any stomach pain or digestive issues? </p></p>
-            <a href="#six" class="w3-btn w3-green" onclick="allergiesAdd()">Yes</a>
+            <a href="#six" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
             <a href="#six" class="w3-btn w3-red">No</a>
         </div>
     </div>
@@ -166,7 +165,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             <h1>Question 6</h1>
         </div>
         <div class="w3-container">
-            <p>Are you experiencing rashes, hives, and/or general itchyness?</p>
+            <p>Are you experiencing rashes, hives, and/or general itchiness?</p>
             <a href="#resultPage" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
             <a href="#resultPage" class="w3-btn w3-red">No</a>
         </div>
@@ -180,7 +179,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             <h1>Results</h1>
         </div>
         <div class="w3-container">
-            <p id="resultText">this text should go away</p>
+            <p id="resultMessage">this text should go away</p>
             <a class="w3-btn w3-grey" onclick="showResult()">See Result</a>
         </div>
     </div>
