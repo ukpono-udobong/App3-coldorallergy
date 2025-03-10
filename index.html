@@ -184,13 +184,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	
    <!-- Results Page -->
-<div class="page" id="resultPage" onload="showResult()"> <!-- Calls showResult() when the page loads -->
+<div class="page" id="resultPage">
     <div class="w3-container w3-flat-carrot">
         <h1>Results</h1>
     </div>
     <div class="w3-container">
         <p id="resultMessage">Processing your results...</p>
-        <a class="w3-btn w3-grey" onclick="showResult()">See Result</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hash === "#resultPage") {
+            showResult(); // Automatically display result
+        }
+    });
+</script>
+
     </div>
 </div>
 
