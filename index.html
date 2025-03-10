@@ -183,16 +183,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 	
-    <!-- Results Page -->
-    <div class="page" id="resultPage">  //creates a new page for result
-        <div class="w3-container w3-flat-carrot">
-            <h1>Results</h1>
-        </div>
-        <div class="w3-container">
-            <p id="resultMessage">this text should go away</p>
-            <a class="w3-btn w3-grey" onclick="showResult()">See Result</a>
-        </div>
+   <!-- Results Page -->
+<div class="page" id="resultPage" onload="showResult()"> <!-- Calls showResult() when the page loads -->
+    <div class="w3-container w3-flat-carrot">
+        <h1>Results</h1>
     </div>
+    <div class="w3-container">
+        <p id="resultMessage">Processing your results...</p>
+        <a class="w3-btn w3-grey" onclick="showResult()">See Result</a>
+    </div>
+</div>
+
 
     <footer class="w3-bottom w3-container w3-flat-carrot">
         <p>DIY!</p>
