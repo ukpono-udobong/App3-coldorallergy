@@ -105,61 +105,66 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
   </div>
 <!-- Question 1 -->
-    <div class="page" id="one">
+    <div class="page" id="one"> //creates a new page for question
         <div class="w3-container w3-flat-carrot">
             <h1>Question 1</h1> 
         </div>
         <div class="w3-container">
-            <p>Are your eyes watery or itchy?</p>
+            <p>Are your eyes watery or itchy?</p> //displays question
             <a href="#two" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
             <a href="#two" class="w3-btn w3-red">No</a>
+		//clickable answer choices that move to the next page^
         </div>
     </div>
 
     <!-- Question 2 -->
-    <div class="page" id="two">
+    <div class="page" id="two"> //creates a new page for question
         <div class="w3-container w3-flat-carrot">
             <h1>Question 2</h1>
         </div>
         <div class="w3-container">
-            <p>Do you have a fever?</p>
+            <p>Do you have a fever?</p> //displays question
             <a href="#three" class="w3-btn w3-green" onclick="coldAdd()">Yes</a>
             <a href="#three" class="w3-btn w3-red">No</a>
+		//clickable answer choices that move to the next page^
         </div>
     </div>
 
     <!-- Question 3 -->
-    <div class="page" id="three">
+    <div class="page" id="three"> //creates a new page for question
         <div class="w3-container w3-flat-carrot">
             <h1>Question 3</h1>
         </div>
         <div class="w3-container">
-            <p>Do you have a runny or stuffy nose?</p>
+            <p>Do you have a runny or stuffy nose?</p>  //displays question
             <a href="#four" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
             <a href="#four" class="w3-btn w3-red">No</a>
+		//clickable answer choices that move to the next page^
         </div>
     </div>
 
     <!-- Question 4 -->
-    <div class="page" id="four">
+    <div class="page" id="four"> //creates a new page for question
         <div class="w3-container w3-flat-carrot">
             <h1>Question 4</h1>
         </div>
         <div class="w3-container">
-            <p>Do you have body aches?</p>
+            <p>Do you have body aches?</p  //displays question
             <a href="#five" class="w3-btn w3-green" onclick="coldAdd()">Yes</a>
             <a href="#five" class="w3-btn w3-red">No</a>
+		//clickable answer choices that move to the next page^
         </div>
     </div>
-	<!-- Question 6 -->
-    <div class="page" id="five">
+	<!-- Question 5 -->
+    <div class="page" id="five"> //creates a new page for question
         <div class="w3-container w3-flat-carrot">
             <h1>Question 5</h1>
         </div>
         <div class="w3-container">
-            <p> Have you experienced any stomach pain or digestive issues? </p></p>
+            <p> Have you experienced any stomach pain or digestive issues? </p></p>   //displays question
             <a href="#six" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
             <a href="#six" class="w3-btn w3-red">No</a>
+		//clickable answer choices that move to the next page^
         </div>
     </div>
 
@@ -169,16 +174,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             <h1>Question 6</h1>
         </div>
         <div class="w3-container">
-            <p>Are you experiencing rashes, hives, and/or general itchiness?</p>
+            <p>Are you experiencing rashes, hives, and/or general itchiness?</p>  //displays question
             <a href="#resultPage" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
             <a href="#resultPage" class="w3-btn w3-red">No</a>
+		//clickable answer choices that move to the next page^
         </div>
     </div>
 
 
 	
     <!-- Results Page -->
-    <div class="page" id="resultPage">
+    <div class="page" id="resultPage">  //creates a new page for result
         <div class="w3-container w3-flat-carrot">
             <h1>Results</h1>
         </div>
