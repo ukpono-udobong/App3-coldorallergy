@@ -1,76 +1,72 @@
 <!DOCTYPE html> 
 <html> 
-<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
- 
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  
+This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  
+Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
- 
- 
+
 Authors in chronological order of contribution:
 Tim Riedel
 Author 2
- Ukpono Udobong
+Ukpono Udobong
+
 Further Information:
 http://cns.utexas.edu/fri
- 
+
 Research Educator:
 Timothy Riedel
 triedel@utexas.edu
- 
+
 Brief Description of Goal of Code:
 The goal of this code is to diagnose a cold or allergies based on symptoms.
- 
+
 Known Issues:
 blah, blah, blah, blah
 
+Resources used:
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
-   <head> 
-      <title>Hello World</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
-      <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
 
+<head> 
+    <title>Cold or Allergies?</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="w3-colors-flat.css">
+</head> 
 
 <script>  
-        var allergy_count = 0;
-        var cold_count = 0;
+    var allergy_count = 0;
+    var cold_count = 0;
 
-//these functions above tally the number of answers consistent with cold and allergies
-
-//the functions bellow increase the allergy symptom count by 1 when a user selects an allergy-related symptom
-	
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-	//	alert(allergy_count);
-
-        }
-
-        function coldAdd(){
-            cold_count = cold_count + 1;
-        }
-//Determines whether the user's symptoms are more consistent with allergies or a cold and creates a result based on the tallied answers.
-	function showResult() {
-		//Get the paragraph element where the result will be displayed
-    var resultText = document.getElementById("resultMessage"); // Get the correct element
-    if (allergy_count > cold_count) {
-        resultText.innerHTML = "Your symptoms are more consistent with allergies.";
-    } else if (cold_count > allergy_count) {
-        resultText.innerHTML = "Your symptoms are more consistent with a cold.";
-    } else {
-        resultText.innerHTML = "Your symptoms could indicate either a cold or allergies.";
+    // These functions tally the number of answers consistent with cold and allergies
+    function allergyAdd(){
+        allergy_count = allergy_count + 1;
     }
-}
-  </script>
 
+    function coldAdd(){
+        cold_count = cold_count + 1;
+    }
 
+    // Determines whether the user's symptoms are more consistent with allergies or a cold 
+    // and displays the result based on the tally
+    function showResult() {
+        var resultText = document.getElementById("resultMessage"); // Get the result display element
+        if (allergy_count > cold_count) {
+            resultText.innerHTML = "Your symptoms are more consistent with allergies.";
+        } else if (cold_count > allergy_count) {
+            resultText.innerHTML = "Your symptoms are more consistent with a cold.";
+        } else {
+            resultText.innerHTML = "Your symptoms could indicate either a cold or allergies.";
+        }
+    }
+</script>
 
 <style>	
 .body {
-     margin: 0em;
+    margin: 0em;
 }
 
 .page {
@@ -84,7 +80,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     background-color: hsl(0,0%,100%);
 }
 
-  .page:target {
+/* Makes the target page visible */
+.page:target {
     left: 0vw;
     z-index: 1;
 }
@@ -92,98 +89,94 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+    <h1>Cold or Allergies?</h1>
 </div>
-	
+
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p>
-	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-  </div>
+    <p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p>
+    
+    <a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+    
+    <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  
+       This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  
+       Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+
+    <p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
+
 <!-- Question 1 -->
-    <div class="page" id="one"> //creates a new page for question
-        <div class="w3-container w3-flat-carrot">
-            <h1>Question 1</h1> 
-        </div>
-        <div class="w3-container">
-            <p>Are your eyes watery or itchy?</p> //displays question
-            <a href="#two" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
-            <a href="#two" class="w3-btn w3-red">No</a>
-		//clickable answer choices that move to the next page^
-        </div>
+<div class="page" id="one">
+    <div class="w3-container w3-flat-carrot">
+        <h1>Question 1</h1> 
     </div>
-
-    <!-- Question 2 -->
-    <div class="page" id="two"> //creates a new page for question
-        <div class="w3-container w3-flat-carrot">
-            <h1>Question 2</h1>
-        </div>
-        <div class="w3-container">
-            <p>Do you have a fever?</p> //displays question
-            <a href="#three" class="w3-btn w3-green" onclick="coldAdd()">Yes</a>
-            <a href="#three" class="w3-btn w3-red">No</a>
-		//clickable answer choices that move to the next page^
-        </div>
+    <div class="w3-container">
+        <p>Are your eyes watery or itchy?</p> 
+        <a href="#two" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
+        <a href="#two" class="w3-btn w3-red">No</a>
     </div>
+</div>
 
-    <!-- Question 3 -->
-    <div class="page" id="three"> //creates a new page for question
-        <div class="w3-container w3-flat-carrot">
-            <h1>Question 3</h1>
-        </div>
-        <div class="w3-container">
-            <p>Do you have a runny or stuffy nose?</p>  //displays question
-            <a href="#four" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
-            <a href="#four" class="w3-btn w3-red">No</a>
-		//clickable answer choices that move to the next page^
-        </div>
+<!-- Question 2 -->
+<div class="page" id="two">
+    <div class="w3-container w3-flat-carrot">
+        <h1>Question 2</h1>
     </div>
-
-    <!-- Question 4 -->
-    <div class="page" id="four"> //creates a new page for question
-        <div class="w3-container w3-flat-carrot">
-            <h1>Question 4</h1>
-        </div>
-        <div class="w3-container">
-            <p>Do you have body aches?</p  //displays question
-            <a href="#five" class="w3-btn w3-green" onclick="coldAdd()">Yes</a>
-            <a href="#five" class="w3-btn w3-red">No</a>
-		//clickable answer choices that move to the next page^
-        </div>
+    <div class="w3-container">
+        <p>Do you have a fever?</p>
+        <a href="#three" class="w3-btn w3-green" onclick="coldAdd()">Yes</a>
+        <a href="#three" class="w3-btn w3-red">No</a>
     </div>
-	<!-- Question 5 -->
-    <div class="page" id="five"> //creates a new page for question
-        <div class="w3-container w3-flat-carrot">
-            <h1>Question 5</h1>
-        </div>
-        <div class="w3-container">
-            <p> Have you experienced any stomach pain or digestive issues? </p></p>   //displays question
-            <a href="#six" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
-            <a href="#six" class="w3-btn w3-red">No</a>
-		//clickable answer choices that move to the next page^
-        </div>
+</div>
+
+<!-- Question 3 -->
+<div class="page" id="three">
+    <div class="w3-container w3-flat-carrot">
+        <h1>Question 3</h1>
     </div>
-
-	    <!-- Question 6 -->
-    <div class="page" id="six">
-        <div class="w3-container w3-flat-carrot">
-            <h1>Question 6</h1>
-        </div>
-        <div class="w3-container">
-            <p>Are you experiencing rashes, hives, and/or general itchiness?</p>  //displays question
-            <a href="#resultPage" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
-            <a href="#resultPage" class="w3-btn w3-red">No</a>
-		//clickable answer choices that move to the next page^
-        </div>
+    <div class="w3-container">
+        <p>Do you have a runny or stuffy nose?</p> 
+        <a href="#four" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
+        <a href="#four" class="w3-btn w3-red">No</a>
     </div>
+</div>
 
+<!-- Question 4 -->
+<div class="page" id="four">
+    <div class="w3-container w3-flat-carrot">
+        <h1>Question 4</h1>
+    </div>
+    <div class="w3-container">
+        <p>Do you have body aches?</p>
+        <a href="#five" class="w3-btn w3-green" onclick="coldAdd()">Yes</a>
+        <a href="#five" class="w3-btn w3-red">No</a>
+    </div>
+</div>
 
-	
-   <!-- Results Page -->
+<!-- Question 5 -->
+<div class="page" id="five">
+    <div class="w3-container w3-flat-carrot">
+        <h1>Question 5</h1>
+    </div>
+    <div class="w3-container">
+        <p>Have you experienced any stomach pain or digestive issues?</p>
+        <a href="#six" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
+        <a href="#six" class="w3-btn w3-red">No</a>
+    </div>
+</div>
+
+<!-- Question 6 -->
+<div class="page" id="six">
+    <div class="w3-container w3-flat-carrot">
+        <h1>Question 6</h1>
+    </div>
+    <div class="w3-container">
+        <p>Are you experiencing rashes, hives, and/or general itchiness?</p>
+        <a href="#resultPage" class="w3-btn w3-green" onclick="allergyAdd()">Yes</a>
+        <a href="#resultPage" class="w3-btn w3-red">No</a>
+    </div>
+</div>
+
+<!-- Results Page -->
 <div class="page" id="resultPage">
     <div class="w3-container w3-flat-carrot">
         <h1>Results</h1>
@@ -194,21 +187,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 <script>
+    // Automatically display results when the results page loads
     document.addEventListener("DOMContentLoaded", function() {
         if (window.location.hash === "#resultPage") {
-            showResult(); // Automatically display result
+            showResult(); 
         }
     });
 </script>
 
-    </div>
-</div>
+<footer class="w3-bottom w3-container w3-flat-carrot">
+    <p>DIY!</p>
+</footer>
 
-
-    <footer class="w3-bottom w3-container w3-flat-carrot">
-        <p>DIY!</p>
-    </footer>
-
-    
 </body>
-</html>
+</html> 
